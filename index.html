@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-    <meta charset="UTF-8" />
-    <title>Breakout JS</title>
+    <meta charset="UTF-8">
+    <title>Breakout JS Touch</title>
     <style>
         body {
-            background:black;
-            display:flex;
-            justify-content:center;
-            margin-top:20px;
+            background: black;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
         }
         canvas {
-            border:1px solid white;
+            border: 1px solid white;
+            touch-action: none; /* impedisce lo scroll su mobile */
         }
     </style>
 </head>
 <body>
     <canvas id="gioco" width="600" height="400"></canvas>
-
     <script type="module" src="main.js"></script>
 </body>
 </html>
