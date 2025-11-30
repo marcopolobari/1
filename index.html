@@ -1,162 +1,23 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Mia Pagina Web</title>
+    <meta charset="UTF-8" />
+    <title>Breakout JS</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            background:black;
+            display:flex;
+            justify-content:center;
+            margin-top:20px;
         }
-        
-        .container {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 600px;
-            width: 100%;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        
-        h1 {
-            color: #667eea;
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 2.5em;
-        }
-        
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 1.1em;
-        }
-        
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            display: block;
-            border: 5px solid #667eea;
-            object-fit: cover;
-        }
-        
-        .section {
-            margin: 25px 0;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 10px;
-        }
-        
-        .section h2 {
-            color: #764ba2;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-        
-        .section p {
-            color: #333;
-            line-height: 1.6;
-            font-size: 1.1em;
-        }
-        
-        .hobbies {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        
-        .hobby-tag {
-            background: #667eea;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9em;
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 2px solid #eee;
-            color: #666;
-        }
-        
-        .emoji {
-            font-size: 1.5em;
+        canvas {
+            border:1px solid white;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- CAMBIA IL NOME QUI -->
-        <h1>🌟 Mario Rossi 🌟</h1>
-        <p class="subtitle">La mia prima pagina web!</p>
-        
-        <!-- CAMBIA L'IMMAGINE QUI (puoi usare emoji o un link a un'immagine) -->
-        <div style="text-align: center; font-size: 80px; margin: 20px 0;">
-            😎
-        </div>
-        
-        <!-- CAMBIA LA DESCRIZIONE QUI -->
-        <div class="section">
-            <h2>📝 Chi sono</h2>
-            <p>
-                Ciao! Sono uno studente di terza media e amo la tecnologia. 
-                Mi piace scoprire come funzionano i computer e creare cose nuove!
-            </p>
-        </div>
-        
-        <!-- CAMBIA I TUOI HOBBY QUI -->
-        <div class="section">
-            <h2>🎮 I miei hobby</h2>
-            <div class="hobbies">
-                <span class="hobby-tag">Videogiochi</span>
-                <span class="hobby-tag">Calcio</span>
-                <span class="hobby-tag">Musica</span>
-                <span class="hobby-tag">YouTube</span>
-            </div>
-        </div>
-        
-        <!-- CAMBIA IL TUO SOGNO QUI -->
-        <div class="section">
-            <h2>🚀 Il mio sogno</h2>
-            <p>
-                Da grande voglio diventare un programmatore di videogiochi 
-                e creare giochi che faranno divertire milioni di persone!
-            </p>
-        </div>
-        
-        <!-- CAMBIA IL COLORE PREFERITO QUI -->
-        <div class="section">
-            <h2>🎨 Il mio colore preferito</h2>
-            <div style="background: blue; height: 60px; border-radius: 10px; 
-                        display: flex; align-items: center; justify-content: center; 
-                        color: white; font-size: 1.5em; font-weight: bold;">
-                BLU
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>✨ Creato con HTML e CSS ✨</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">
-                Benvenuti all'indirizzo Informatica!
-            </p>
-        </div>
-    </div>
+    <canvas id="gioco" width="600" height="400"></canvas>
+
+    <script type="module" src="main.js"></script>
 </body>
 </html>
