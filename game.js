@@ -59,8 +59,8 @@ class Pallina {
     }
 
     reset() {
-        this.x = 300;
-        this.y = 200;
+        this.x = this.w / 2;
+        this.y = this.h / 2;
         this.dy = -3;
     }
 
@@ -155,6 +155,7 @@ class Gioco {
 
         this.running = true;
 
+        // Controlli tastiera
         document.addEventListener("keydown", e => {
             if (e.key === "ArrowLeft") this.barra.muoviSinistra();
             if (e.key === "ArrowRight") this.barra.muoviDestra();
@@ -164,7 +165,7 @@ class Gioco {
     aggiorna() {
         this.pallina.muovi();
 
-        // collisione barra
+        // Collisione con barra
         if (
             this.pallina.y > this.barra.y &&
             this.pallina.x > this.barra.x &&
@@ -173,9 +174,10 @@ class Gioco {
             this.pallina.dy = -this.pallina.dy;
         }
 
-        // collisione mattoni
-        if (this.mattoni.controllaCollisione(this.pallina))
+        // Collisione con mattoni
+        if (this.mattoni.controllaCollisione(this.pallina)) {
             this.pallina.dy = -this.pallina.dy;
+        }
     }
 
     disegna() {
@@ -185,6 +187,14 @@ class Gioco {
         this.barra.disegna(this.ctx);
         this.pallina.disegna(this.ctx);
         this.mattoni.disegna(this.ctx);
+
+        // Messaggio vittoria
+        if (this.mattoni.tuttiDistrutti()) {
+            this.ctx.fillStyle = Colori.VERDE;
+            this.ctx.font = "30px Arial";
+            this.ctx.textAlign = "center";
+            this.ctx.fillText("HAI VINTO!", this.w / 2, this.h / 2);
+        }
     }
 }
 
