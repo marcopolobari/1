@@ -135,7 +135,7 @@ class Punteggio:
         self.punti += 1
     
     def disegna(self, screen):
-        testo = self.font.render(f"Punteggio: {self.punti}", True, Colori.BIANCO)
+        testo = self.font.render(f"MARCOPOLO Punteggio: {self.punti}", True, Colori.BIANCO)
         screen.blit(testo, (10, 10))
 
 
